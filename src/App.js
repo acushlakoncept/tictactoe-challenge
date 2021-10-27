@@ -23,8 +23,6 @@ function App() {
     }
     let squares = [...cells]
 
-    
-
     if(turn === 'X') {
       squares[i] = 'X'
       setTurn('O')
