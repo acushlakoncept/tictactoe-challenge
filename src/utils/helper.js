@@ -22,4 +22,18 @@ const getWinner = squares => {
   return result;
 };
 
+const startNewPlayers = handleRestartGame => {
+  handleRestartGame();
+  document.getElementById('gameSection').classList.toggle('d-none');
+  document.getElementById('playerForm').classList.toggle('d-none');
+};
+
+const handleSubmit = e => {
+  e.preventDefault();
+  e.target.reset();
+  document.getElementById('gameSection').classList.toggle('d-none');
+  document.getElementById('playerForm').classList.toggle('d-none');
+};
+
 export default getWinner;
+export { startNewPlayers, handleSubmit };

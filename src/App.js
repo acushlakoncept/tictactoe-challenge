@@ -1,8 +1,9 @@
+/* eslint-disable no-nested-ternary */
 import React, { useState } from 'react';
 import './App.css';
 import { Container, Button, Form } from 'react-bootstrap';
 import GameBoard from './component/GameBoard';
-import getWinner from './utils/helper';
+import getWinner, { startNewPlayers, handleSubmit } from './utils/helper';
 
 function App() {
   const [cells, setCells] = useState(Array(9).fill(null));
@@ -14,12 +15,6 @@ function App() {
     setWinner(null);
     setCells(Array(9).fill(null));
     setTurn('X');
-  };
-
-  const startNewPlayers = () => {
-    handleRestartGame();
-    document.getElementById('gameSection').classList.toggle('d-none');
-    document.getElementById('playerForm').classList.toggle('d-none');
   };
 
   const handleClick = i => {
@@ -50,25 +45,6 @@ function App() {
     setFormData({ ...formData, ...data });
   };
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    e.target.reset();
-    document.getElementById('gameSection').classList.toggle('d-none');
-    document.getElementById('playerForm').classList.toggle('d-none');
-  };
-
-  const gameInfo = () => {
-    let info = '';
-    if (winner) {
-      info = `Winner: ${winner === 'X' ? formData.player1 : formData.player2}`;
-    } else if (!cells.includes(null)) {
-      info = 'Game is a tie';
-    } else {
-      info = `Next Player: ${turn === 'X' ? formData.player1 : formData.player2}`;
-    }
-    return info;
-  };
-
   return (
     <Container className="d-flex flex-column align-items-center">
       <h1 className="text-center">Welcome to Tic Tac Toe Game</h1>
@@ -84,13 +60,16 @@ function App() {
       </Form>
 
       <div id="gameSection" className="d-none">
-        <h3>{gameInfo}</h3>
+        <h3>
+          {winner ? `Winner: ${winner === 'X' ? formData.player1 : formData.player2}` : !cells.includes(null)
+            ? 'Game is a tie' : `Next Player: ${turn === 'X' ? formData.player1 : formData.player2}`}
+        </h3>
         <GameBoard squares={cells} handleClick={handleClick} />
         {
         (winner || !cells.includes(null)) && (
           <>
             <Button className="btn-success mt-2" onClick={() => handleRestartGame()}>Play Again</Button>
-            <Button className="btn-success mt-2" onClick={() => startNewPlayers()}>Start with New Players</Button>
+            <Button className="btn-success mt-2" onClick={() => startNewPlayers(handleRestartGame)}>Start with New Players</Button>
           </>
         )
       }
