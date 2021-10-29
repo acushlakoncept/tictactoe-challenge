@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders GameBoard correctly 1`] = `
+<div
+  className="gameBoard"
+>
+  <button
+    className="square btn-light null btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+  <button
+    className="square btn-light null btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+  <button
+    className="square btn-light null btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+  <button
+    className="square btn-light null btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+  <button
+    className="square btn-light null btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+  <button
+    className="square btn-light null btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+  <button
+    className="square btn-light null btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+  <button
+    className="square btn-light null btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+  <button
+    className="square btn-light null btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+</div>
+`;
+
+exports[`renders StockCard correctly 1`] = `
+<div
+  className="gameBoard"
+>
+  <button
+    className="square btn-light null btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+  <button
+    className="square btn-light null btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+  <button
+    className="square btn-light null btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+  <button
+    className="square btn-light null btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+  <button
+    className="square btn-light null btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+  <button
+    className="square btn-light null btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+  <button
+    className="square btn-light null btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+  <button
+    className="square btn-light null btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+  <button
+    className="square btn-light null btn btn-primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  />
+</div>
+`;

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Square correctly 1`] = `
+<button
+  className="square btn-light 1 btn btn-primary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  1
+</button>
+`;
