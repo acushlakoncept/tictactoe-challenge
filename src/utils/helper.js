@@ -1,34 +1,25 @@
 const getWinner = squares => {
-  const winningCombos = {
-    horizontal: [
-      [0, 1, 2],
-      [3, 4, 5],
-      [6, 7, 8],
-    ],
-    vertical: [
-      [0, 3, 6],
-      [1, 4, 7],
-      [2, 5, 8],
-    ],
-    diagonal: [
-      [0, 4, 8],
-      [2, 4, 6],
-    ],
-  };
+  const winningCombos = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
 
-  let winnerPiece = null;
-  for (const combo in winningCombos) {
-    // eslint-disable-next-line no-loop-func
-    winningCombos[combo].forEach(pattern => {
-      const [a, b, c] = pattern;
-      console.log('p', squares[a], squares[b], squares[c]);
-      if (squares[a] && squares[a] === squares[b] && squares[b] === squares[c]) {
-        winnerPiece = squares[a];
-      }
-    });
+  let result = null;
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < winningCombos.length; i++) {
+    const [a, b, c] = winningCombos[i];
+    if (squares[a] && squares[a] === squares[b] && squares[b] === squares[c]) {
+      result = squares[a];
+    }
   }
 
-  return winnerPiece;
+  return result;
 };
 
 export default getWinner;
