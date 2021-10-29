@@ -1,11 +1,9 @@
-import {Button} from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
-const Square = ({value, handleClick}) => {
-    return (
-      <Button className={`square btn-light ${value}`} onClick={handleClick} >
-          {value}
-      </Button>
-    );
-}
+const Square = ({ value, handleClick }) => (
+  <Button className={`square btn-light ${value}`} onClick={handleClick}>
+    {value}
+  </Button>
+);
 
-export default Square
+export default Square;
