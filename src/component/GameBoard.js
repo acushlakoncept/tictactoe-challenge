@@ -1,3 +1,5 @@
+/* eslint-disable react/no-array-index-key */
+import PropTypes from 'prop-types';
 import Square from './Square';
 
 const GameBoard = ({ squares, handleClick }) => (
@@ -7,5 +9,10 @@ const GameBoard = ({ squares, handleClick }) => (
     ))}
   </div>
 );
+
+GameBoard.propTypes = {
+  squares: PropTypes.arrayOf.isRequired,
+  handleClick: PropTypes.func.isRequired,
+};
 
 export default GameBoard;
